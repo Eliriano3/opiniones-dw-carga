@@ -1,0 +1,7 @@
+[
+  { "categoria": "Juguetes", "base": 19.99, "variacion": 10.00 },
+  { "categoria": "Electrónica", "base": 149.99, "variacion": 100.00 },
+  { "categoria": "Ropa", "base": 29.99, "variacion": 20.00 },
+  { "categoria": "Hogar", "base": 49.99, "variacion": 30.00 },
+  { "categoria": "Deportes", "base": 39.99, "variacion": 25.00 }
+]

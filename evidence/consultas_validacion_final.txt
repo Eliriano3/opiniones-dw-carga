@@ -1,0 +1,255 @@
+
+--- Lote 1/16 ---
+(conjunto 1: sin filas)
+
+--- Lote 2/16 ---
+(conjunto 1: sin filas)
+
+--- Lote 3/16 ---
+Tabla | Registros
+--------------------
+dim.Categoria | 5
+dim.Clasificacion | 3
+dim.Cliente | 501
+dim.Fecha | 4018
+dim.Fuente | 3
+dim.Producto | 200
+etl.Carga | 110
+etl.PalabraClave | 32
+etl.Rechazo | 988
+fact.Opinion | 406
+fact.ResumenSatisfaccion | 386
+stg.Cliente (ultima) | 500
+stg.ComentarioSocial (ultima) | 200
+stg.Encuesta (ultima) | 6
+stg.Producto (ultima) | 200
+stg.ResenaWeb (ultima) | 200
+
+--- Lote 4/16 ---
+Fuente | Descripcion | Clasificacion | DescripcionClasificacion | Opiniones
+------------------------------------------------------------------------------
+ENCUESTA_CSV | Encuestas internas de satisfacción | NEG | Negativa | 2
+ENCUESTA_CSV | Encuestas internas de satisfacción | NEU | Neutra | 2
+ENCUESTA_CSV | Encuestas internas de satisfacción | POS | Positiva | 2
+RESENA_WEB | Reseñas del sitio web | NEG | Negativa | 69
+RESENA_WEB | Reseñas del sitio web | NEU | Neutra | 13
+RESENA_WEB | Reseñas del sitio web | POS | Positiva | 118
+SOCIAL_API | Comentarios en redes sociales | NEG | Negativa | 46
+SOCIAL_API | Comentarios en redes sociales | NEU | Neutra | 70
+SOCIAL_API | Comentarios en redes sociales | POS | Positiva | 84
+
+--- Lote 5/16 ---
+Relacion | Huerfanos
+-----------------------
+fact.Opinion -> dim.Producto | 0
+fact.Opinion -> dim.Cliente | 0
+fact.Opinion -> dim.Fecha | 0
+fact.Opinion -> dim.Fuente | 0
+fact.Opinion -> dim.Clasificacion | 0
+fact.Opinion -> etl.Carga | 0
+fact.ResumenSatisfaccion -> dim.Producto | 0
+fact.ResumenSatisfaccion -> dim.Fecha | 0
+fact.ResumenSatisfaccion -> dim.Fuente | 0
+
+--- Lote 6/16 ---
+(conjunto 1: sin filas)
+
+--- Lote 7/16 ---
+(conjunto 1: sin filas)
+
+--- Lote 8/16 ---
+IdProductoOrigen | Producto | Categoria | TotalOpiniones | Positivas | Neutras | Negativas | PorcentajeSatisfaccion | CalificacionPromedio
+------------------------------------------------------------------------------------------------------------------------
+5 | Producto_5 | Juguetes | 33 | 18 | 8 | 7 | 54.55 | 3.19
+3 | Producto_3 | Juguetes | 30 | 13 | 9 | 8 | 43.33 | 2.82
+13 | Producto_13 | Electrónica | 28 | 14 | 4 | 10 | 50.00 | 3.55
+10 | Producto_10 | Electrónica | 26 | 13 | 7 | 6 | 50.00 | 2.60
+2 | Producto_2 | Electrónica | 26 | 14 | 2 | 10 | 53.85 | 2.33
+16 | Producto_16 | Deportes | 24 | 14 | 5 | 5 | 58.33 | 3.15
+15 | Producto_15 | Juguetes | 23 | 8 | 5 | 10 | 34.78 | 4.00
+11 | Producto_11 | Hogar | 22 | 15 | 3 | 4 | 68.18 | 2.83
+8 | Producto_8 | Deportes | 21 | 12 | 4 | 5 | 57.14 | 2.78
+20 | Producto_20 | Ropa | 20 | 12 | 3 | 5 | 60.00 | 3.50
+17 | Producto_17 | Electrónica | 19 | 11 | 4 | 4 | 57.89 | 3.11
+12 | Producto_12 | Hogar | 18 | 8 | 4 | 6 | 44.44 | 3.00
+14 | Producto_14 | Hogar | 17 | 8 | 4 | 5 | 47.06 | 4.00
+19 | Producto_19 | Deportes | 15 | 9 | 3 | 3 | 60.00 | 2.60
+4 | Producto_4 | Ropa | 15 | 10 | 2 | 3 | 66.67 | 3.50
+7 | Producto_7 | Ropa | 15 | 5 | 4 | 6 | 33.33 | 2.88
+9 | Producto_9 | Hogar | 15 | 8 | 2 | 5 | 53.33 | 3.46
+6 | Producto_6 | Hogar | 14 | 5 | 2 | 7 | 35.71 | 3.25
+18 | Producto_18 | Ropa | 10 | 3 | 4 | 3 | 30.00 | 2.60
+1 | Producto_1 | Juguetes | 9 | 2 | 4 | 3 | 22.22 | 2.00
+
+--- Lote 9/16 ---
+ProductosConOpiniones | OpinionesTotales | PromedioSatisfaccion
+------------------------------------------------------------------
+26 | 406 | 45.42
+
+--- Lote 10/16 ---
+TotalRechazos
+----------------
+988
+
+--- Lote 11/16 ---
+Motivo | Cantidad
+--------------------
+IdCliente 3625 no existe en el catalogo de clientes (FK). | 4
+IdCliente 2057 no existe en el catalogo de clientes (FK). | 4
+IdCliente 6971 no existe en el catalogo de clientes (FK). | 4
+IdCliente 8303 no existe en el catalogo de clientes (FK). | 4
+IdCliente 6022 no existe en el catalogo de clientes (FK). | 4
+IdCliente 9983 no existe en el catalogo de clientes (FK). | 4
+IdCliente 6680 no existe en el catalogo de clientes (FK). | 4
+IdCliente 6744 no existe en el catalogo de clientes (FK). | 4
+IdCliente 6761 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6763 no existe en el catalogo de clientes (FK). | 2
+IdCliente 677 no existe en el catalogo de clientes (FK). | 2
+IdCliente 679 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6808 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6817 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6821 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6838 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6845 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6852 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6865 no existe en el catalogo de clientes (FK). | 2
+IdProducto 267 no existe en el catalogo de productos (FK). | 2
+IdProducto 268 no existe en el catalogo de productos (FK). | 2
+IdProducto 317 no existe en el catalogo de productos (FK). | 2
+IdProducto 336 no existe en el catalogo de productos (FK). | 2
+IdProducto 378 no existe en el catalogo de productos (FK). | 2
+IdProducto 385 no existe en el catalogo de productos (FK). | 2
+IdProducto 388 no existe en el catalogo de productos (FK). | 2
+IdProducto 444 no existe en el catalogo de productos (FK). | 2
+IdProducto 462 no existe en el catalogo de productos (FK). | 2
+IdProducto 480 no existe en el catalogo de productos (FK). | 2
+IdProducto 519 no existe en el catalogo de productos (FK). | 2
+IdProducto 604 no existe en el catalogo de productos (FK). | 2
+IdProducto 634 no existe en el catalogo de productos (FK). | 2
+IdProducto 654 no existe en el catalogo de productos (FK). | 2
+IdProducto 693 no existe en el catalogo de productos (FK). | 2
+IdProducto 757 no existe en el catalogo de productos (FK). | 2
+IdProducto 779 no existe en el catalogo de productos (FK). | 2
+IdProducto 864 no existe en el catalogo de productos (FK). | 2
+IdProducto 940 no existe en el catalogo de productos (FK). | 2
+IdProducto 967 no existe en el catalogo de productos (FK). | 2
+IdProducto 989 no existe en el catalogo de productos (FK). | 2
+IdCliente 6046 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6079 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6110 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6119 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6238 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6248 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6272 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6273 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6287 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6324 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6326 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6342 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6367 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6372 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6382 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6473 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6506 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6509 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6542 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6554 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6558 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6563 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6568 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6587 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6610 no existe en el catalogo de clientes (FK). | 2
+IdCliente 6660 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1001 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1028 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1042 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1044 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1108 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1115 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1138 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1169 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1182 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1204 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1214 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1267 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1272 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1276 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1287 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1315 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1339 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1345 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1370 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1464 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1474 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1488 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1525 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1527 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1558 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1568 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1574 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1575 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1585 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1638 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1649 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1656 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1665 no existe en el catalogo de clientes (FK). | 2
+IdCliente 1677 no existe en el catalogo de clientes (FK). | 2
+(salida limitada a 100 filas)
+
+--- Lote 12/16 ---
+IdRechazo | IdCarga | IdRegistroOrigen | Motivo | FechaRechazo
+-----------------------------------------------------------------
+988 | 107 | 500 | IdCliente 9572 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+987 | 107 | 499 | IdCliente 9732 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+986 | 107 | 498 | IdCliente 6079 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+985 | 107 | 497 | IdCliente 2487 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+984 | 107 | 496 | IdCliente 2257 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+983 | 107 | 495 | IdCliente 8255 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+982 | 107 | 494 | IdCliente 1829 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+981 | 107 | 493 | IdProducto 989 no existe en el catalogo de productos (FK). | 23/10/2026 7:14:14 PM
+980 | 107 | 492 | IdCliente 1707 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+979 | 107 | 491 | IdCliente 4808 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+978 | 107 | 490 | IdCliente 3187 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+977 | 107 | 489 | IdCliente 9147 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+976 | 107 | 488 | IdCliente 6971 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+975 | 107 | 487 | IdCliente 3087 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+974 | 107 | 486 | IdCliente 1585 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+973 | 107 | 485 | IdCliente 5102 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+972 | 107 | 484 | IdCliente 3626 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+971 | 107 | 483 | IdCliente 6852 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+970 | 107 | 482 | IdCliente 3485 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+969 | 107 | 481 | IdCliente 6287 no existe en el catalogo de clientes (FK). | 23/10/2026 7:14:14 PM
+
+--- Lote 13/16 ---
+GruposConDiferencia
+----------------------
+0
+
+--- Lote 14/16 ---
+Origen | Registros
+---------------------
+stg.Encuesta (ultima) | 6
+fact CSV | 6
+stg.ResenaWeb (ultima) | 200
+fact Web | 200
+stg.ComentarioSocial (ultima) | 200
+fact Social | 200
+
+--- Lote 15/16 ---
+IdCarga | IdFuente | Estado | FechaInicio | FechaFin | RegistrosLeidos | RegistrosInsertados | RegistrosDuplicados | RegistrosRechazados | Detalle
+------------------------------------------------------------------------------------------------------------------------
+1 | 1 | COMPLETADA | 23/10/2026 7:12:29 PM | 23/10/2026 7:12:47 PM | 705 | 705 | 0 | 0 | Maestros: 500 clientes, 200 productos, 5 categorias
+2 | 1 | COMPLETADA | 23/10/2026 7:12:29 PM | 23/10/2026 7:12:47 PM | 500 | 6 | 0 | 494 | Encuestas: 6 insertadas, 494 rechazadas
+3 | 2 | COMPLETADA | 23/10/2026 7:12:29 PM | 23/10/2026 7:12:47 PM | 200 | 200 | 0 | 0 | Resenas web: 200 insertadas, 0 rechazadas
+4 | 3 | COMPLETADA | 23/10/2026 7:12:29 PM | 23/10/2026 7:12:47 PM | 200 | 200 | 0 | 0 | Comentarios sociales: 200 insertados, 0 rechazados
+5 | 1 | COMPLETADA | 23/10/2026 7:12:29 PM | 23/10/2026 7:12:47 PM | 100 | 100 | 0 | 0 | Catalogo de fuentes: 100 cargas historicas
+106 | 1 | COMPLETADA | 23/10/2026 7:13:57 PM | 23/10/2026 7:14:14 PM | 705 | 705 | 0 | 0 | Maestros: 500 clientes, 200 productos, 5 categorias
+107 | 1 | COMPLETADA | 23/10/2026 7:13:57 PM | 23/10/2026 7:14:14 PM | 500 | 0 | 6 | 494 | Encuestas: 0 insertadas, 494 rechazadas
+108 | 2 | COMPLETADA | 23/10/2026 7:13:57 PM | 23/10/2026 7:14:14 PM | 200 | 0 | 200 | 0 | Resenas web: 0 insertadas, 0 rechazadas
+109 | 3 | COMPLETADA | 23/10/2026 7:13:57 PM | 23/10/2026 7:14:14 PM | 200 | 0 | 200 | 0 | Comentarios sociales: 0 insertados, 0 rechazados
+110 | 1 | COMPLETADA | 23/10/2026 7:13:57 PM | 23/10/2026 7:14:14 PM | 100 | 0 | 100 | 0 | Catalogo de fuentes: 0 cargas historicas
+
+--- Lote 16/16 ---
+TotalCargasHistoricas
+------------------------
+100
